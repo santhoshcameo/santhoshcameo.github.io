@@ -37,10 +37,17 @@ const highlights = [
   },
   {
     icon: FaAward,
-    title: 'Award Finalist',
-    subtitle: 'Ireland AI & Data Scientist Student of the Year, 2018',
+    title: 'AI Student of the Year',
+    subtitle: 'Finalist, AI Awards Ireland 2018',
     color: 'text-rose-400',
     bg: 'bg-rose-500/10',
+  },
+  {
+    icon: FaAward,
+    title: 'Data Scientist Student of the Year',
+    subtitle: 'Finalist, DatSci Awards Ireland 2018',
+    color: 'text-orange-400',
+    bg: 'bg-orange-500/10',
   },
   {
     icon: FaMicrophone,
