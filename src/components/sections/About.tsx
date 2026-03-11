@@ -1,17 +1,54 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { FaTrophy, FaMicrophone, FaBookOpen, FaCertificate } from 'react-icons/fa';
 import SectionHeading from '@/components/ui/SectionHeading';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import GlassCard from '@/components/ui/GlassCard';
 import { profile } from '@/data/profile';
-import { StatItem } from '@/types';
 
-const stats: StatItem[] = [
-  { label: 'Years of Experience', value: 7, suffix: '+' },
-  { label: 'Publications', value: 8, suffix: '' },
-  { label: 'Countries (FeTS)', value: 50, suffix: '+' },
-  { label: 'Clinics Deployed', value: 36, suffix: '+' },
+const highlights = [
+  {
+    icon: FaTrophy,
+    title: 'RSNA Magna Cum Laude',
+    subtitle: 'Chicago 2024',
+    color: 'text-amber-400',
+    bg: 'bg-amber-500/10',
+  },
+  {
+    icon: FaBookOpen,
+    title: 'Nature Communications',
+    subtitle: 'Co-Author, 2025',
+    color: 'text-green-400',
+    bg: 'bg-green-500/10',
+  },
+  {
+    icon: FaBookOpen,
+    title: 'MICCAI 2024',
+    subtitle: 'First Author, Morocco',
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500/10',
+  },
+  {
+    icon: FaBookOpen,
+    title: 'IEEE JBHI',
+    subtitle: 'Co-Author, Under Review',
+    color: 'text-blue-400',
+    bg: 'bg-blue-500/10',
+  },
+  {
+    icon: FaMicrophone,
+    title: 'Invited Speaker',
+    subtitle: 'PET Summit Zurich, World ML Summit Dublin',
+    color: 'text-purple-400',
+    bg: 'bg-purple-500/10',
+  },
+  {
+    icon: FaCertificate,
+    title: '3 Certifications',
+    subtitle: 'Stanford ML, AWS, Cloudera',
+    color: 'text-accent-light',
+    bg: 'bg-accent/10',
+  },
 ];
 
 export default function About() {
@@ -25,28 +62,32 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12"
         >
           <GlassCard hover={false}>
             <p className="text-gray-300 leading-relaxed text-lg">{profile.summary}</p>
           </GlassCard>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {highlights.map((item, i) => (
             <motion.div
-              key={stat.label}
+              key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <GlassCard>
-                <AnimatedCounter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  label={stat.label}
-                />
+              <GlassCard className="h-full">
+                <div className="flex items-start gap-3">
+                  <div className={`w-10 h-10 rounded-lg ${item.bg} flex items-center justify-center flex-shrink-0`}>
+                    <item.icon className={item.color} size={18} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-medium text-sm">{item.title}</h3>
+                    <p className="text-gray-400 text-xs mt-1">{item.subtitle}</p>
+                  </div>
+                </div>
               </GlassCard>
             </motion.div>
           ))}

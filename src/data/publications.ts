@@ -41,7 +41,7 @@ export const publications: Publication[] = [
     id: 'efficient-fl-ieee',
     title: 'Efficient Privacy-Preserving Medical Cross-Silo Federated Learning',
     authors: '[Co-Author]',
-    venue: 'IEEE JBHI',
+    venue: 'IEEE Journal of Biomedical and Health Informatics',
     year: 2025,
     status: 'under-review',
     tags: ['Federated Learning', 'IEEE'],
