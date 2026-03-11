@@ -1,4 +1,4 @@
-export const GITHUB_USERNAME = 'santhoshparamp';
+export const GITHUB_USERNAME = 'santhoshcameo';
 
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
