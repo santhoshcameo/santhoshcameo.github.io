@@ -30,6 +30,8 @@ export interface Publication {
   status: PublicationStatus;
   award?: string;
   tags: string[];
+  abstract?: string;
+  keywords?: string[];
 }
 
 export interface SkillCategory {

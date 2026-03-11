@@ -9,6 +9,8 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'in-progress',
     tags: ['Foundation Models', 'Privacy', 'Medical Imaging'],
+    abstract: 'Fine-tuning pretrained models on clinical data is standard practice in medical AI, yet the privacy implications remain poorly characterized. We present a systematic study of training data memorization across four pretraining paradigms—random initialization, ImageNet-1K (ResNet-50, 25M params), ImageNet-21K (ViT-Base, 86M params), and medical-domain pretraining (MedSAM, 86M params)—evaluated on five medical imaging datasets spanning dermatology, gastroenterology, ophthalmology, and radiology. Using a differential training framework, we quantify per-sample memorization for over 40,000 patient images across 20 model configurations. Our results reveal a rare disease privacy paradox: patients with rare conditions are memorized at dramatically higher rates than those with common diagnoses—with rare-class memorization scores exceeding common classes by over an order of magnitude. This disparity persists across all pretraining paradigms, though large-scale pretrained transformers amplify the effect. Controlled visual distinctiveness experiments further demonstrate that memorization is driven by statistical rarity in the training distribution rather than perceptual properties of individual samples. Membership inference attacks validate that these memorization gaps translate to real-world privacy vulnerabilities, with rare classes exhibiting consistently higher attack success rates. We evaluate three mitigation strategies: Uniform DP-SGD, Individualized DP-SGD (IDP-SGD) with per-class privacy budgets, and naive sample removal. Our findings suggest that current fine-tuning practices create an inequitable privacy landscape where patients with the rarest conditions bear the greatest privacy burden, and that individualized privacy mechanisms offer a more principled path toward equitable protection in medical AI.',
+    keywords: ['memorization', 'rare disease', 'differential privacy', 'membership inference', 'foundation models', 'medical imaging', 'DP-SGD'],
   },
   {
     id: 'fets-nature',
@@ -18,6 +20,8 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'published',
     tags: ['Federated Learning', 'Nature Comms'],
+    abstract: 'Computational competitions are the standard for benchmarking medical image analysis algorithms, but they typically use small curated test datasets acquired at a few centers, leaving a gap to the reality of diverse multicentric patient data. To this end, the Federated Tumor Segmentation (FeTS) Challenge represents the paradigm for real-world algorithmic performance evaluation. The FeTS challenge is a competition to benchmark (i) federated learning aggregation algorithms and (ii) state-of-the-art segmentation algorithms, across multiple international sites. Weight aggregation and client selection techniques were compared using a multicentric brain tumor dataset in realistic federated learning simulations, yielding benefits for adaptive weight aggregation, and efficiency gains through client sampling. Quantitative performance evaluation of state-of-the-art segmentation algorithms on data distributed internationally across 32 institutions yielded good generalization on average, albeit the worst-case performance revealed data-specific modes of failure. Similar multi-site setups can help validate the real-world utility of healthcare AI algorithms in the future.',
+    keywords: ['federated learning', 'tumor segmentation', 'benchmarking', 'multicentric', 'weight aggregation', 'brain tumor'],
   },
   {
     id: 'privacy-leakage-jmir',
@@ -27,6 +31,8 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'under-review',
     tags: ['Federated Learning', 'LLMs', 'Privacy'],
+    abstract: 'Federated learning (FL) enables multi-institutional model training on clinical text without sharing raw data; however, gradient inversion methods can reconstruct sensitive information from shared model updates. The extent of such privacy leakage in FL applied to radiology reports, and the role of tokenizer design, remains unclear. Six FL clients trained a GPT-2–style transformer (117M parameters; sequence length 32) on two public radiology corpora comprising 368,751 diagnostic reports, 98,206 discharge summaries, and 1,500 MIMIC-CXR free-text reports. Models were trained using three tokenizers (GPT-2, RadBERT, LLaMA-2) with batch sizes of 64, 128, and 256. Exact sentence reconstruction ranged from 33% to 42% across tokenizers. RadBERT yielded higher reconstruction fidelity and greater recovery of clinical terms, but no tokenizer prevented leakage. Substantial portions of radiology report text can be reconstructed from FL gradients even with larger batch sizes and domain-specific tokenizers. Tokenizer design influences leakage severity and should be incorporated into privacy evaluations for clinical language models.',
+    keywords: ['gradient inversion', 'tokenizer', 'radiology reports', 'federated learning', 'GPT-2', 'RadBERT', 'privacy leakage'],
   },
   {
     id: 'inclusive-fl',
@@ -36,6 +42,8 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'under-review',
     tags: ['Federated Learning', 'Differential Privacy'],
+    abstract: 'Federated Learning (FL) offers a promising approach for training clinical AI models without centralizing sensitive patient data. However, its real-world adoption is hindered by challenges related to privacy, resource constraints, and compliance. Existing Differential Privacy (DP) approaches often apply uniform noise, which disproportionately degrades model performance, even among well-compliant institutions. In this work, we propose a novel compliance-aware FL framework that enhances DP by adaptively adjusting noise based on quantifiable client compliance scores. Additionally, we introduce a compliance scoring tool based on key healthcare and security standards to promote secure, inclusive, and equitable participation across diverse clinical settings. Extensive experiments on public datasets demonstrate that integrating under-resourced, less compliant clinics with highly regulated institutions yields accuracy improvements of up to 15% over traditional FL. This work advances FL by balancing privacy, compliance, and performance, making it a viable solution for real-world clinical workflows in global healthcare.',
+    keywords: ['differential privacy', 'compliance scoring', 'federated learning', 'clinical AI', 'adaptive noise', 'inclusive healthcare'],
   },
   {
     id: 'efficient-fl-ieee',
@@ -45,6 +53,8 @@ export const publications: Publication[] = [
     year: 2025,
     status: 'under-review',
     tags: ['Federated Learning', 'IEEE'],
+    abstract: 'Federated Learning (FL) is becoming increasingly important for advancing machine learning in the medical domain, as it enables collaborative model training across multiple institutions without requiring them to share raw patient data. Unlike traditional centralized machine learning, which gathers data and trains the model in a single location, FL shares model updates among multiple independent participants, thereby keeping their data private. However, this decentralized structure-while privacy-preserving in principle-significantly expands the attack surface. Model updates exchanged between sites introduce new vulnerabilities, increasing the risk of unauthorized access, model poisoning, server-side eavesdropping, and potential leakage of sensitive patient information. Although established homomorphic encryption (HE) schemes such as CKKS, BFV, and BGV offer strong theoretical guarantees for secure computation, their high computational overhead often renders them impractical for real-world medical applications. To address this, we introduce a novel Secure Multi-Party Computation (SMPC)-based protocol tailored specifically for FL in the healthcare context. Our approach holistically rethinks the entire FL-SMPC pipeline, incorporating concurrency at critical stages to improve runtime efficiency while preserving strong security guarantees for the aggregated global model on the server side-an often overlooked aspect in existing SMPC approaches. In contrast to many SMPC-based methods that remain inaccessible due to proprietary or unpublished code, we release our full implementation publicly, bridging the gap between academic research and practical deployment.',
+    keywords: ['secure multi-party computation', 'homomorphic encryption', 'cross-silo', 'federated learning', 'privacy-preserving', 'medical AI'],
   },
   {
     id: 'rsna-privacy',
@@ -55,6 +65,8 @@ export const publications: Publication[] = [
     status: 'award',
     award: 'Magna Cum Laude Award',
     tags: ['LLMs', 'Federated Learning', 'RSNA'],
+    abstract: 'Federated learning (FL) enables multi-institutional model training on clinical text without sharing raw data; however, gradient inversion methods can reconstruct sensitive information from shared model updates. The extent of such privacy leakage in FL applied to radiology reports, and the role of tokenizer design, remains unclear. Six FL clients trained a GPT-2–style transformer (117M parameters; sequence length 32) on two public radiology corpora comprising 368,751 diagnostic reports, 98,206 discharge summaries, and 1,500 MIMIC-CXR free-text reports. Models were trained using three tokenizers (GPT-2, RadBERT, LLaMA-2) with batch sizes of 64, 128, and 256. Exact sentence reconstruction ranged from 33% to 42% across tokenizers. RadBERT yielded higher reconstruction fidelity and greater recovery of clinical terms, but no tokenizer prevented leakage. Substantial portions of radiology report text can be reconstructed from FL gradients even with larger batch sizes and domain-specific tokenizers. Tokenizer design influences leakage severity and should be incorporated into privacy evaluations for clinical language models.',
+    keywords: ['gradient inversion', 'tokenizer', 'radiology reports', 'federated learning', 'GPT-2', 'RadBERT', 'privacy leakage'],
   },
   {
     id: 'miccai-attack',
@@ -64,6 +76,8 @@ export const publications: Publication[] = [
     year: 2024,
     status: 'published',
     tags: ['Adversarial ML', 'Federated Learning', 'MICCAI'],
+    abstract: 'Federated learning (FL) plays a vital role in boosting both accuracy and privacy in the collaborative medical imaging field. The importance of privacy increases with the diverse security standards across nations and corporations, particularly in healthcare and global FL initiatives. Current research on privacy attacks in federated medical imaging focuses on sophisticated gradient inversion attacks that can reconstruct images from FL communications. These methods demonstrate potential worst-case scenarios, highlighting the need for effective security measures and the adoption of comprehensive zero-trust security frameworks. Our paper introduces a novel method for performing precise reconstruction attacks on the private data of participating clients in FL settings using a malicious server. We conducted experiments on brain tumor MRI and chest CT data sets, implementing existing 2D and novel 3D reconstruction technique. Our results reveal significant privacy breaches: 35.19% of data reconstructed with 6 clients, 37.21% with 12 clients in 2D, and 62.92% in 3D with 12 clients. This underscores the urgent need for enhanced privacy protections in FL systems. To address these issues, we suggest effective measures to counteract such vulnerabilities by securing gradient, analytic, and linear layers. Our contributions aim to strengthen the security framework of FL in medical imaging, promoting the safe advancement of collaborative healthcare research.',
+    keywords: ['gradient inversion', 'reconstruction attack', 'medical imaging', 'zero-trust', 'federated learning', '3D reconstruction'],
   },
   {
     id: 'ieee-intrusion',
@@ -73,5 +87,7 @@ export const publications: Publication[] = [
     year: 2018,
     status: 'published',
     tags: ['Deep Learning', 'Cybersecurity', 'IEEE'],
+    abstract: 'Deep learning has increased in popularity with researchers and developers investigating and using it for various use cases and applications. This research work focuses on realtime network intrusion detection by making use of deep learning. A cloud-based prototype system was developed to investigate the capability of deep learning based binomial classification and multinomial models to detect network intrusions in real-time. An evaluation study was carried out using the benchmark NSL-KDD dataset to compare deep learning models built using H2O and DeepLearning4J libraries, with other commonly used machine learning models such as Support Vector Machines, Random Forest, Logistic Regression and Naive Bayes. The results showed that the choice of the deep learning library is an important factor to consider for real-time applications. The H2O deep learning based binomial and multinomial models generally outperformed the other models, achieving over 99.5% accuracy using cross-validation on the NSL-KDD training dataset and over 83% accuracy on the test dataset.',
+    keywords: ['deep learning', 'network intrusion detection', 'NSL-KDD', 'cloud computing', 'H2O', 'real-time classification'],
   },
 ];
