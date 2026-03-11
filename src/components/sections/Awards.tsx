@@ -11,6 +11,7 @@ import {
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import { awards } from '@/data/awards';
+import { AwardCategory } from '@/types';
 import { IconType } from 'react-icons';
 
 const iconMap: Record<string, IconType> = {
@@ -21,42 +22,63 @@ const iconMap: Record<string, IconType> = {
   FaChalkboardTeacher,
 };
 
+const categoryConfig: Record<AwardCategory, { title: string; color: string }> = {
+  award: { title: 'Awards', color: 'text-amber-400' },
+  talk: { title: 'Invited Talks, Conferences & Presentations', color: 'text-purple-400' },
+  certification: { title: 'Certifications & Mentoring', color: 'text-cyan-400' },
+};
+
+const categories: AwardCategory[] = ['award', 'talk', 'certification'];
+
 export default function Awards() {
   return (
     <section id="awards" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
-          title="Awards & Certifications"
-          subtitle="Recognition, speaking engagements, and credentials"
+          title="Awards, Talks & Certifications"
+          subtitle="Recognition, invited presentations, and professional credentials"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {awards.map((award, i) => {
-            const Icon = iconMap[award.icon] || FaAward;
-            return (
-              <motion.div
-                key={award.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-              >
-                <GlassCard className="h-full">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="text-accent-light" size={18} />
-                    </div>
-                    {award.year && (
-                      <span className="text-gray-500 text-sm ml-auto">{award.year}</span>
-                    )}
-                  </div>
-                  <h3 className="text-white font-medium mb-2">{award.title}</h3>
-                  <p className="text-gray-400 text-sm">{award.description}</p>
-                </GlassCard>
-              </motion.div>
-            );
-          })}
-        </div>
+        {categories.map((cat) => {
+          const items = awards.filter((a) => a.category === cat);
+          if (items.length === 0) return null;
+          const config = categoryConfig[cat];
+
+          return (
+            <div key={cat} className="mb-12 last:mb-0">
+              <h3 className={`text-lg font-semibold mb-6 ${config.color}`}>
+                {config.title}
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {items.map((award, i) => {
+                  const Icon = iconMap[award.icon] || FaAward;
+                  return (
+                    <motion.div
+                      key={award.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.05 }}
+                    >
+                      <GlassCard className="h-full">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                            <Icon className="text-accent-light" size={18} />
+                          </div>
+                          {award.year && (
+                            <span className="text-gray-500 text-sm ml-auto">{award.year}</span>
+                          )}
+                        </div>
+                        <h3 className="text-white font-medium mb-2">{award.title}</h3>
+                        <p className="text-gray-400 text-sm">{award.description}</p>
+                      </GlassCard>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

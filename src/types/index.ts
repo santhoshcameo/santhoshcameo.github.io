@@ -50,12 +50,15 @@ export interface Education {
   thesis?: string;
 }
 
+export type AwardCategory = 'award' | 'talk' | 'certification';
+
 export interface Award {
   id: string;
   title: string;
   description: string;
   year?: string;
   icon: string;
+  category: AwardCategory;
 }
 
 export interface GitHubRepo {
