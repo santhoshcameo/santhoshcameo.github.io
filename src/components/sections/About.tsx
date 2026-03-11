@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaTrophy, FaMicrophone, FaBookOpen, FaCertificate } from 'react-icons/fa';
+import { FaTrophy, FaMicrophone, FaBookOpen, FaCertificate, FaAward } from 'react-icons/fa';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import { profile } from '@/data/profile';
@@ -34,6 +34,13 @@ const highlights = [
     subtitle: 'Co-Author, Under Review',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
+  },
+  {
+    icon: FaAward,
+    title: 'Award Finalist',
+    subtitle: 'Ireland AI & Data Scientist Student of the Year, 2018',
+    color: 'text-rose-400',
+    bg: 'bg-rose-500/10',
   },
   {
     icon: FaMicrophone,

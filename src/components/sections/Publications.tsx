@@ -144,15 +144,19 @@ export default function Publications() {
                   {hasExtra && (
                     <button
                       onClick={() => toggleExpand(pub.id)}
-                      className="flex items-center gap-1 mt-3 text-xs text-gray-500 hover:text-accent-light transition-colors"
+                      className={`inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 text-xs font-medium rounded-full border transition-all ${
+                        isExpanded
+                          ? 'border-accent/40 text-accent-light bg-accent/10'
+                          : 'border-white/10 text-gray-400 hover:border-accent/30 hover:text-accent-light hover:bg-accent/5'
+                      }`}
                     >
-                      <span>{isExpanded ? 'Show less' : 'Read more'}</span>
+                      <span>{isExpanded ? 'Hide Abstract' : 'Abstract'}</span>
                       <motion.span
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
                         className="inline-flex"
                       >
-                        <FiChevronDown size={14} />
+                        <FiChevronDown size={12} />
                       </motion.span>
                     </button>
                   )}

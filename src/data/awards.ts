@@ -25,10 +25,18 @@ export const awards: Award[] = [
     icon: 'FaMicrophone',
   },
   {
-    id: 'ireland-finalist',
-    title: 'Ireland AI & Data Science Student of the Year Finalist',
+    id: 'ireland-ai-finalist',
+    title: 'Ireland AI Student of the Year — Finalist',
     description:
-      'Award finalist for both Ireland AI Student of the Year and Ireland Data Scientist Student of the Year in 2018.',
+      'Award Finalist at the AI Awards, 2018.',
+    year: '2018',
+    icon: 'FaAward',
+  },
+  {
+    id: 'ireland-datasci-finalist',
+    title: 'Ireland Data Scientist Student of the Year — Finalist',
+    description:
+      'Award Finalist at the DatSci Awards, 2018.',
     year: '2018',
     icon: 'FaAward',
   },
