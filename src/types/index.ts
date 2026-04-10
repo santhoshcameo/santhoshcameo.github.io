@@ -19,7 +19,7 @@ export interface Experience {
   bullets: string[];
 }
 
-export type PublicationStatus = 'published' | 'under-review' | 'under-revision' | 'in-progress' | 'award';
+export type PublicationStatus = 'published' | 'under-review' | 'in-progress' | 'award';
 
 export interface Publication {
   id: string;
