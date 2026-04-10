@@ -9,25 +9,25 @@ const hobbies = [
     emoji: '🏏',
     title: 'Cricket',
     description: 'German Bundesliga Cricket Player for TSV 1949 Pfaffengrund e.V. — Heidelberg',
-    funLine: 'Smashing sixes in Deutschland! 💥🇩🇪',
+   
   },
   {
     emoji: '🏸',
     title: 'Badminton',
-    description: 'Regular on the court — smashes and drop shots are therapy',
-    funLine: 'Shuttle diplomacy at its finest 😤🔥',
+
+   
   },
   {
     emoji: '🥊',
     title: 'Muay Thai',
-    description: 'Muay Thai aspirant — learning the art of eight limbs',
-    funLine: 'Training to throw elbows... respectfully 🙏👊',
+
+   
   },
   {
     emoji: '🥋',
     title: 'Jiu-Jitsu',
-    description: 'Jiu-Jitsu aspirant — chasing the gentle art on the mats',
-    funLine: 'Still figuring out how to breathe while someone sits on me 😅🤼',
+
+   
   },
 ];
 
