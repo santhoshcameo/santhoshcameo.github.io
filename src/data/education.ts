@@ -16,7 +16,7 @@ export const educationList: Education[] = [
     institution: 'Anna University',
     location: 'Coimbatore, India',
     degree: 'B.E. in Electronics and Communication',
-    period: 'Sep 2008 – Mar 2012',
+    period: '',
     honors: 'First Class',
   },
 ];

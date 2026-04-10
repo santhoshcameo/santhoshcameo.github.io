@@ -24,21 +24,21 @@ export default function Education() {
               <GlassCard>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <FaGraduationCap className="text-accent-light" size={24} />
+                    <FaGraduationCap className="text-accent-text" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{edu.degree}</h3>
-                    <p className="text-accent-light text-sm">{edu.institution}</p>
-                    <div className="flex items-center gap-3 text-gray-500 text-sm mt-1">
-                      <span>{edu.period}</span>
-                      <span>|</span>
-                      <span>{edu.location}</span>
+                    <h3 className="text-primary font-semibold mb-1">{edu.degree}</h3>
+                    <p className="text-accent-text text-sm">{edu.institution}</p>
+                    <div className="flex items-center gap-3 text-text-muted text-sm mt-1">
+                      {edu.period && <span>{edu.period}</span>}
+                      {edu.period && edu.location && <span>|</span>}
+                      {edu.location && <span>{edu.location}</span>}
                     </div>
                     {edu.honors && (
                       <p className="text-green-400 text-sm mt-2">{edu.honors}</p>
                     )}
                     {edu.thesis && (
-                      <p className="text-gray-400 text-sm mt-2 italic">
+                      <p className="text-tertiary text-sm mt-2 italic">
                         Thesis: {edu.thesis}
                       </p>
                     )}

@@ -60,7 +60,7 @@ const highlights = [
     icon: FaCertificate,
     title: '3 Certifications',
     subtitle: 'Stanford ML, AWS, Cloudera',
-    color: 'text-accent-light',
+    color: 'text-accent-text',
     bg: 'bg-accent/10',
   },
 ];
@@ -79,7 +79,7 @@ export default function About() {
           className="mb-12"
         >
           <GlassCard hover={false}>
-            <p className="text-gray-300 leading-relaxed text-lg">{profile.summary}</p>
+            <p className="text-secondary leading-relaxed text-lg">{profile.summary}</p>
           </GlassCard>
         </motion.div>
 
@@ -98,8 +98,8 @@ export default function About() {
                     <item.icon className={item.color} size={18} />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium text-sm">{item.title}</h3>
-                    <p className="text-gray-400 text-xs mt-1">{item.subtitle}</p>
+                    <h3 className="text-primary font-medium text-sm">{item.title}</h3>
+                    <p className="text-tertiary text-xs mt-1">{item.subtitle}</p>
                   </div>
                 </div>
               </GlassCard>

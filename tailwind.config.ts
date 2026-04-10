@@ -24,6 +24,16 @@ const config: Config = {
           400: "#22d3ee",
           500: "#06b6d4",
         },
+        // Semantic theme tokens
+        primary: "var(--color-text-primary)",
+        secondary: "var(--color-text-secondary)",
+        tertiary: "var(--color-text-tertiary)",
+        "text-muted": "var(--color-text-muted)",
+        "accent-text": "var(--color-accent-text)",
+        surface: "var(--color-bg-surface)",
+        elevated: "var(--color-bg-elevated)",
+        muted: "var(--color-bg-muted)",
+        "border-theme": "var(--color-border-strong)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",

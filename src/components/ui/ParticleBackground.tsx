@@ -24,6 +24,24 @@ export default function ParticleBackground() {
     const particles: Particle[] = [];
     const count = 60;
 
+    const getThemeColors = () => {
+      const style = getComputedStyle(document.documentElement);
+      return {
+        particleRgb: style.getPropertyValue('--color-particle').trim(),
+        opacityMult: parseFloat(style.getPropertyValue('--color-particle-opacity-mult').trim()) || 1,
+      };
+    };
+
+    let themeColors = getThemeColors();
+
+    const observer = new MutationObserver(() => {
+      themeColors = getThemeColors();
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -53,7 +71,7 @@ export default function ParticleBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${p.opacity})`;
+        ctx.fillStyle = `rgba(${themeColors.particleRgb}, ${p.opacity * themeColors.opacityMult})`;
         ctx.fill();
 
         // Draw connections
@@ -65,7 +83,7 @@ export default function ParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${0.1 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(${themeColors.particleRgb}, ${0.1 * (1 - dist / 150) * themeColors.opacityMult})`;
             ctx.stroke();
           }
         }
@@ -78,6 +96,7 @@ export default function ParticleBackground() {
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resize);
+      observer.disconnect();
     };
   }, []);
 

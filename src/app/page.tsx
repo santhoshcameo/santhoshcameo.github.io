@@ -6,6 +6,7 @@ import Skills from '@/components/sections/Skills';
 import GitHubActivity from '@/components/sections/GitHubActivity';
 import Education from '@/components/sections/Education';
 import Awards from '@/components/sections/Awards';
+import Hobbies from '@/components/sections/Hobbies';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <GitHubActivity />
       <Education />
       <Awards />
+      <Hobbies />
     </>
   );
 }

@@ -63,14 +63,14 @@ export default function Awards() {
                       <GlassCard className="h-full">
                         <div className="flex items-center gap-3 mb-3">
                           <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                            <Icon className="text-accent-light" size={18} />
+                            <Icon className="text-accent-text" size={18} />
                           </div>
                           {award.year && (
-                            <span className="text-gray-500 text-sm ml-auto">{award.year}</span>
+                            <span className="text-text-muted text-sm ml-auto">{award.year}</span>
                           )}
                         </div>
-                        <h3 className="text-white font-medium mb-2">{award.title}</h3>
-                        <p className="text-gray-400 text-sm">{award.description}</p>
+                        <h3 className="text-primary font-medium mb-2">{award.title}</h3>
+                        <p className="text-tertiary text-sm">{award.description}</p>
                       </GlassCard>
                     </motion.div>
                   );

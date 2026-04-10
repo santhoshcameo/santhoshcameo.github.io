@@ -55,7 +55,7 @@ export default function Publications() {
               className={`px-4 py-2 rounded-full text-sm transition-all ${
                 filter === f.value
                   ? 'bg-accent text-white'
-                  : 'glass text-gray-400 hover:text-white'
+                  : 'glass text-tertiary hover:text-primary'
               }`}
             >
               {f.label}
@@ -86,12 +86,12 @@ export default function Publications() {
                       text={statusConfig[pub.status].label}
                       variant={statusConfig[pub.status].variant}
                     />
-                    <span className="text-gray-500 text-sm">{pub.year}</span>
+                    <span className="text-text-muted text-sm">{pub.year}</span>
                   </div>
 
-                  <h3 className="text-white font-medium mb-2 leading-snug">{pub.title}</h3>
-                  <p className="text-gray-500 text-sm mb-3">{pub.authors}</p>
-                  <p className="text-accent-light text-sm font-medium mb-3">{pub.venue}</p>
+                  <h3 className="text-primary font-medium mb-2 leading-snug">{pub.title}</h3>
+                  <p className="text-text-muted text-sm mb-3">{pub.authors}</p>
+                  <p className="text-accent-text text-sm font-medium mb-3">{pub.venue}</p>
 
                   {pub.award && (
                     <div className="flex items-center gap-2 text-amber-400 text-sm mb-3">
@@ -116,10 +116,10 @@ export default function Publications() {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-4 mt-4 border-t border-white/5">
+                        <div className="pt-4 mt-4 border-t border-[var(--color-border-subtle)]">
                           {pub.abstract && (
                             <div className="mb-4 pl-4 border-l-2 border-accent/50">
-                              <p className="text-sm text-gray-400 italic leading-relaxed">
+                              <p className="text-sm text-tertiary italic leading-relaxed">
                                 {pub.abstract}
                               </p>
                             </div>
@@ -130,7 +130,7 @@ export default function Publications() {
                               {pub.keywords.map((keyword) => (
                                 <span
                                   key={keyword}
-                                  className="px-2.5 py-0.5 text-xs rounded-full text-accent-light border border-accent/30 bg-accent/5"
+                                  className="px-2.5 py-0.5 text-xs rounded-full text-accent-text border border-accent/30 bg-accent/5"
                                 >
                                   {keyword}
                                 </span>
@@ -148,8 +148,8 @@ export default function Publications() {
                       onClick={() => toggleExpand(pub.id)}
                       className={`inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 text-xs font-medium rounded-full border transition-all ${
                         isExpanded
-                          ? 'border-accent/40 text-accent-light bg-accent/10'
-                          : 'border-white/10 text-gray-400 hover:border-accent/30 hover:text-accent-light hover:bg-accent/5'
+                          ? 'border-accent/40 text-accent-text bg-accent/10'
+                          : 'border-[var(--color-border)] text-tertiary hover:border-accent/30 hover:text-accent-text hover:bg-accent/5'
                       }`}
                     >
                       <span>{isExpanded ? 'Hide Abstract' : 'Abstract'}</span>

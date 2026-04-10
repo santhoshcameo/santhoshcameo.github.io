@@ -35,9 +35,9 @@ export default function Skills() {
                 <GlassCard>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <Icon className="text-accent-light" size={20} />
+                      <Icon className="text-accent-text" size={20} />
                     </div>
-                    <h3 className="text-white font-semibold">{cat.title}</h3>
+                    <h3 className="text-primary font-semibold">{cat.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {cat.skills.map((skill) => (

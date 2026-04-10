@@ -11,6 +11,7 @@ export const skillCategories: SkillCategory[] = [
       'Adversarial ML',
       'Differential Privacy',
       'LLMs',
+      'Retrieval-Augmented Generation (RAG)',
       'Responsible AI',
       'AI Safety',
     ],
@@ -18,7 +19,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'ML Stack',
     icon: 'FaBrain',
-    skills: ['PyTorch', 'Hugging Face', 'LangChain', 'Weights & Biases', 'MLflow'],
+    skills: ['PyTorch', 'Hugging Face Transformers', 'LangChain', 'Weights & Biases', 'MLflow', 'ChromaDB/FAISS', 'vLLM', 'LoRA/QLoRA/PEFT'],
   },
   {
     title: 'Engineering',

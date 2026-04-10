@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import { GITHUB_USERNAME } from '@/lib/constants';
@@ -17,6 +18,10 @@ const years = Array.from({ length: currentYear - 2016 }, (_, i) => currentYear -
 
 export default function GitHubActivity() {
   const [selectedYear, setSelectedYear] = useState<number | undefined>(undefined);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   return (
     <section id="github" className="py-24 px-4">
@@ -33,7 +38,7 @@ export default function GitHubActivity() {
             className={`px-4 py-2 rounded-full text-sm transition-all ${
               selectedYear === undefined
                 ? 'bg-accent text-white'
-                : 'glass text-gray-400 hover:text-white'
+                : 'glass text-tertiary hover:text-primary'
             }`}
           >
             Last 12 months
@@ -45,7 +50,7 @@ export default function GitHubActivity() {
               className={`px-4 py-2 rounded-full text-sm transition-all ${
                 selectedYear === year
                   ? 'bg-accent text-white'
-                  : 'glass text-gray-400 hover:text-white'
+                  : 'glass text-tertiary hover:text-primary'
               }`}
             >
               {year}
@@ -64,7 +69,7 @@ export default function GitHubActivity() {
                 key={selectedYear ?? 'last'}
                 username={GITHUB_USERNAME}
                 year={selectedYear}
-                colorScheme="dark"
+                colorScheme={mounted && resolvedTheme === 'light' ? 'light' : 'dark'}
                 blockSize={12}
                 blockMargin={4}
                 fontSize={14}

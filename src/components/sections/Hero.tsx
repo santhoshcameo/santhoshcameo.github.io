@@ -30,7 +30,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             <span className="text-gradient">{profile.name}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-6">{profile.title}</p>
+          <p className="text-xl md:text-2xl text-tertiary mb-6">{profile.title}</p>
 
           <div className="h-8 mb-8">
             <AnimatePresence mode="wait">
@@ -40,7 +40,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4 }}
-                className="text-accent-light text-lg"
+                className="text-accent-text text-lg"
               >
                 {profile.taglines[taglineIndex]}
               </motion.p>
@@ -52,7 +52,7 @@ export default function Hero() {
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-tertiary hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <FaGithub size={28} />
@@ -61,7 +61,7 @@ export default function Hero() {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-tertiary hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={28} />
@@ -70,14 +70,14 @@ export default function Hero() {
               href={profile.googleScholar}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-tertiary hover:text-primary transition-colors"
               aria-label="Google Scholar"
             >
               <FaGraduationCap size={28} />
             </a>
             <a
               href={`mailto:${profile.email}`}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-tertiary hover:text-primary transition-colors"
               aria-label="Email"
             >
               <FaEnvelope size={28} />
@@ -93,7 +93,7 @@ export default function Hero() {
         >
           <a
             href="#about"
-            className="inline-block animate-bounce text-gray-500 hover:text-accent-light transition-colors"
+            className="inline-block animate-bounce text-text-muted hover:text-accent-text transition-colors"
           >
             <svg
               className="w-6 h-6 mx-auto"

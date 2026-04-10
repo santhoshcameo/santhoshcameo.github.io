@@ -18,7 +18,7 @@ export default function AnimatedCounter({ value, suffix = '', label }: AnimatedC
         {inView ? <CountUp end={value} duration={2.5} /> : '0'}
         {suffix}
       </div>
-      <p className="text-gray-400 text-sm">{label}</p>
+      <p className="text-tertiary text-sm">{label}</p>
     </div>
   );
 }
