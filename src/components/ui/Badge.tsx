@@ -1,6 +1,6 @@
 interface BadgeProps {
   text: string;
-  variant?: 'default' | 'accent' | 'success' | 'warning' | 'award';
+  variant?: 'default' | 'accent' | 'success' | 'warning' | 'info' | 'award';
 }
 
 const variantClasses: Record<string, string> = {
@@ -8,6 +8,7 @@ const variantClasses: Record<string, string> = {
   accent: 'bg-accent/10 text-accent-light border-accent/30',
   success: 'bg-green-500/10 text-green-400 border-green-500/30',
   warning: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
+  info: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
   award: 'bg-amber-500/10 text-amber-400 border-amber-500/30 animate-glow',
 };
 

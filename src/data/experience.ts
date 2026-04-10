@@ -12,6 +12,7 @@ export const experiences: Experience[] = [
       'Demonstrated patient privacy leakage in LLMs fine-tuned on radiology reports through federated training, including tokenizer-driven privacy risks and compliance-aware mitigation strategies (Magna Cum Laude Award, RSNA Chicago 2024).',
       'Pioneered novel 3D with 2D adversarial medical image reconstruction on federated learning in medical imaging, exposing critical client-side security failures (published at MICCAI 2024 Morocco).',
       'Architected a compliance-aware federated learning framework with adaptive differential privacy that adjusts noise based on client compliance, achieving up to 15% accuracy improvement over traditional FL.',
+      'Built a privacy-aware RAG pipeline for radiology report retrieval using locally deployed LLMs, ChromaDB with hybrid retrieval (dense + BM25), and cross-encoder re-ranking, with zero data leaving the hospital network.',
     ],
   },
   {

@@ -10,9 +10,10 @@ import Badge from '@/components/ui/Badge';
 import { publications } from '@/data/publications';
 import { PublicationStatus } from '@/types';
 
-const statusConfig: Record<PublicationStatus, { label: string; variant: 'success' | 'warning' | 'accent' | 'award' }> = {
+const statusConfig: Record<PublicationStatus, { label: string; variant: 'success' | 'warning' | 'info' | 'accent' | 'award' }> = {
   published: { label: 'Published', variant: 'success' },
   'under-review': { label: 'Under Review', variant: 'warning' },
+  'under-revision': { label: 'Under Revision', variant: 'info' },
   'in-progress': { label: 'In Progress', variant: 'accent' },
   award: { label: 'Award', variant: 'award' },
 };
@@ -22,6 +23,7 @@ const filters: { label: string; value: PublicationStatus | 'all' }[] = [
   { label: 'Published', value: 'published' },
   { label: 'Award', value: 'award' },
   { label: 'Under Review', value: 'under-review' },
+  { label: 'Under Revision', value: 'under-revision' },
   { label: 'In Progress', value: 'in-progress' },
 ];
 
