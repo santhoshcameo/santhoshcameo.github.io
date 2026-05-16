@@ -11,7 +11,7 @@ export const profile: Profile = {
     'Trustworthy Clinical AI',
   ],
   summary:
-    'Doctoral Researcher at the University of Heidelberg and DKFZ, building agentic AI systems, GraphRAG pipelines, and fine-tuned foundation models for clinical environments. Co-author in Nature Communications 2025 and RSNA 2024 Magna Cum Laude awardee, with publications at MICCAI, IEEE JBHI, and RSNA Chicago.',
+    'Doctoral Researcher at the University of Heidelberg and DKFZ, building agentic AI systems, GraphRAG pipelines, and fine-tuned foundation models for clinical environments. Recent work includes an ICML 2026 workshop paper on memorization in medical foundation models, co-authorship in Nature Communications 2025, and a Magna Cum Laude Award at RSNA Chicago 2024, with additional publications at MICCAI and IEEE JBHI.',
   location: 'Heidelberg, Germany',
   email: 'santhosh.cameo@gmail.com',
   github: 'https://github.com/santhoshcameo',

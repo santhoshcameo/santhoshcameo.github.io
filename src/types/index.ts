@@ -29,6 +29,7 @@ export interface Publication {
   year: number;
   status: PublicationStatus;
   award?: string;
+  featured?: boolean;
   tags: string[];
   abstract?: string;
   keywords?: string[];

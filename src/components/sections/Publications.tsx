@@ -80,10 +80,13 @@ export default function Publications() {
                   } ${isExpanded ? 'ring-1 ring-accent/40' : ''}`}
                 >
                   <div className="flex items-start justify-between gap-2 mb-3">
-                    <Badge
-                      text={statusConfig[pub.status].label}
-                      variant={statusConfig[pub.status].variant}
-                    />
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Badge
+                        text={statusConfig[pub.status].label}
+                        variant={statusConfig[pub.status].variant}
+                      />
+                      {pub.featured && <Badge text="Featured" variant="highlight" />}
+                    </div>
                     <span className="text-text-muted text-sm">{pub.year}</span>
                   </div>
 
