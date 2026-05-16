@@ -9,25 +9,13 @@ const hobbies = [
     emoji: '🏏',
     title: 'Cricket',
     description: 'German Bundesliga Cricket Player for TSV 1949 Pfaffengrund e.V. — Heidelberg',
-   
-  },
-  {
-    emoji: '🏸',
-    title: 'Badminton',
-
-   
+    funLine: 'Smashing sixes in Deutschland! 💥🇩🇪',
   },
   {
     emoji: '🥊',
-    title: 'Muay Thai',
-
-   
-  },
-  {
-    emoji: '🥋',
-    title: 'Jiu-Jitsu',
-
-   
+    title: 'MMA',
+    description: 'Club level',
+    funLine: 'Training to throw elbows... respectfully 🙏👊 — still figuring out how to breathe while someone sits on me 😅🤼',
   },
 ];
 
@@ -40,7 +28,7 @@ export default function Hobbies() {
           subtitle="When I'm not training models, I'm training myself"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {hobbies.map((hobby, i) => (
             <motion.div
               key={hobby.title}

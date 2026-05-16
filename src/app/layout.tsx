@@ -8,9 +8,9 @@ import ThemeProvider from '@/components/providers/ThemeProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Santhosh Parampottupadam | AI Researcher & PhD Candidate',
+  title: 'Santhosh Parampottupadam | AI Researcher & Doctoral Researcher',
   description:
-    'Personal portfolio of Santhosh Parampottupadam — AI Researcher and PhD Candidate at University of Heidelberg & DKFZ, specializing in privacy-preserving medical AI.',
+    'Personal portfolio of Santhosh Parampottupadam — AI Researcher and Doctoral Researcher at University of Heidelberg & DKFZ, specializing in AI applied in the medical domain.',
   keywords: [
     'AI Researcher',
     'Federated Learning',

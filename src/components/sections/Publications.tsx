@@ -41,7 +41,7 @@ export default function Publications() {
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           title="Publications"
-          subtitle="8 publications across top venues in medical AI and privacy"
+          subtitle="9 publications across top venues in medical AI and privacy"
         />
 
         {/* Filter bar */}

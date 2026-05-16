@@ -2,16 +2,16 @@ import { Profile } from '@/types';
 
 export const profile: Profile = {
   name: 'Santhosh Parampottupadam',
-  title: 'AI Researcher & PhD Candidate',
+  title: 'AI Researcher & Doctoral Researcher',
   taglines: [
-    'Privacy-Preserving Medical AI',
-    'Federated Learning Systems',
-    'Foundation Model Security',
-    'Adversarial Machine Learning',
-    'Trustworthy AI for Healthcare',
+    'Applied in Medical Domain',
+    'Agentic AI Systems',
+    'GraphRAG & Knowledge Graphs',
+    'Foundation Model Fine-Tuning',
+    'Trustworthy Clinical AI',
   ],
   summary:
-    'AI Researcher and PhD Candidate at the University of Heidelberg and DKFZ, specializing in privacy, security, and trustworthiness of foundation models and federated learning systems. Co-author in Nature Communications 2025 and RSNA 2024 Magna Cum Laude awardee, with publications at MICCAI, IEEE JBHI, and RSNA Chicago.',
+    'Doctoral Researcher at the University of Heidelberg and DKFZ, building agentic AI systems, GraphRAG pipelines, and fine-tuned foundation models for clinical environments. Co-author in Nature Communications 2025 and RSNA 2024 Magna Cum Laude awardee, with publications at MICCAI, IEEE JBHI, and RSNA Chicago.',
   location: 'Heidelberg, Germany',
   email: 'santhosh.cameo@gmail.com',
   github: 'https://github.com/santhoshcameo',

@@ -2,6 +2,17 @@ import { Publication } from '@/types';
 
 export const publications: Publication[] = [
   {
+    id: 'icml-memfm-workshop',
+    title: 'Visual Distinctiveness Drives Memorization in Fine-Tuned Medical Foundation Models',
+    authors: 'S. Parampottupadam et al.',
+    venue: 'ICML 2026 Workshop on Memorization in Trustworthy Foundation Models, Seoul',
+    year: 2026,
+    status: 'published',
+    tags: ['Foundation Models', 'Privacy', 'Memorization', 'ICML'],
+    abstract: 'Medical foundation models fine-tuned on private patient data risk leaking individual training samples; in this regime a single recoverable image is a privacy violation. We audit per-class memorization in fine-tuned medical foundation models with a loss-difference memorization score: each canary\'s loss is compared between a model trained with the canary and an otherwise identical model trained without it. Memorization occurs in every architecture-dataset cell we test. Interestingly, the rarest class is not the most memorized: the rarity-monotonicity assumed by prior memorization work outside medical imaging is broken in this regime. Instead, visual distinctiveness contributes to memorization beyond rarity in our setting: the same controlled grayscale intervention applied to two classes at comparable rarity shifts memorization in opposite directions, and on a balanced dataset M(x) rises from a near-zero baseline (0.004) to high memorization (0.480) under the same intervention. DP-LoRA at ε = 1 reduces leakage from the most-memorized class by 90% in our setup while preserving usable accuracy on focused diagnostic tasks, with the protection driven by the DP noise rather than the parameter restriction. These findings point towards more privacy-preserving adaptation of medical foundation models.',
+    keywords: ['memorization', 'medical foundation models', 'DP-LoRA', 'differential privacy', 'visual distinctiveness', 'canary', 'fine-tuning'],
+  },
+  {
     id: 'memorization-risk',
     title: 'Who Gets Memorized and Why? Auditing Visual Distinctiveness as a Driver of Privacy Risk in Medical AI',
     authors: 'S. Parampottupadam et al.',
